@@ -1,0 +1,17 @@
+<div>
+    <input class="" [(ngModel)]="texto" (keyup.enter)="buscador()" type="text"> 
+    <button (click)="buscador()">Buscar</button>
+</div>
+
+<div>
+    <ol>
+        <li *ngFor="let valor of ajax.datosApi" class="d-flex">
+            <img [src]="valor.image" alt="{{valor.name}}" style="width: 2rem;">
+            <p>{{valor.symbol}}</p>
+            <p>{{valor.current_price.toLocaleString()}}</p>
+            <p>{{valor.price_change_percentage_24h}}</p>
+            <p>{{valor.total_volume}}</p>
+            {{valor.id}}<button (click)="mostrarDetalle(valor.id)">Detalle</button>
+        </li>
+    </ol>
+</div>

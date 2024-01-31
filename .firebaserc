@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "coinbaseangular": {
+      "hosting": {
+        "coibase": [
+          "coinbaseangular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "coinbaseangular"
+  }
+}

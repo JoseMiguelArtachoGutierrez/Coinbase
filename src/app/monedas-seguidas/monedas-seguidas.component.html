@@ -1,0 +1,5 @@
+<div *ngFor="let valor of todasLasMonedasDetalle" class="d-flex gap-3">
+    <div><img [src]="valor.image.small"></div>
+    <p>{{valor.name}} ({{valor.symbol}})</p>
+    <button (click)="dejarDeSeguir(valor.id)">Dejar de seguir</button>
+</div>

@@ -1,0 +1,41 @@
+<header class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+
+        <div class="container-fluid" >
+          <a class="navbar-brand text-primary fs-2 fw-bolder logo " routerLink="homer">coinbase</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+
+          <div class="contendorHaburguesa collapse navbar-collapse h-100 justify-content-between gap-5 fw-bold" id="navbarSupportedContent">
+            <div class="nav-item dropdown d-flex align-items-center ">
+              
+              <ul class=" navbar-nav ulCambioMargin d-flex align-items-center justify-content-between h-100 ">
+                <li ><a *ngIf="usuarioActivo" type="button" routerLink="seguidas" >Mis monedas</a></li>
+                <li><a type="button" routerLink="monedas">Monedas</a></li>
+                
+
+              </ul>
+            </div>
+
+            <div *ngIf="!usuarioActivo" class="d-flex align-items-center justify-content-end gap-3 w-auto">
+              <button class="botonPrueba fs-5 text-light btn bg-primary" type="submit" routerLink="usuario">Get start</button>
+            </div>
+            <div *ngIf="usuarioActivo" class="d-flex align-items-center gap-3">
+              <div><img [src]="fotoPerfil"></div>
+              <p>{{nombreUsuario}}</p>
+              <button (click)="cerrarSesion()">Cerrar Sesion</button>
+            </div>
+            
+          </div>
+          
+          
+        </div>
+      </nav>
+</header>
+<!--
+
+
+
+-->

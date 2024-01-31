@@ -1,0 +1,256 @@
+header{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+nav{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+.botonPrueba:hover{
+    background: transparent !important;
+    border: 1px solid rgb(13, 110, 253);
+    color: rgb(13, 110, 253) !important;
+    background-color: none;
+}
+.ulCambioMargin{
+    margin-bottom: 0;
+}
+.ulCambioMargin>li{
+    list-style: none;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block; /* Para que la línea se ajuste al contenido del párrafo */
+}
+.ulCambioMargin:hover{
+    cursor: pointer;
+}
+.ulCambioMargin>li:hover:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px; /* Grosor de la línea */
+    border-radius: 10px;
+    background-color: blue; /* Color de la línea */
+    animation: li 1s ease ;
+
+}
+.h3Size{
+    font-size: 3vw;
+}
+.divH4{
+    display: flex;
+    flex-direction: column;
+    gap: 1000% !important;
+}
+.divH4>div{
+    height: 20% !important;
+    width: 100% !important;
+}
+.divH4>div>h4{
+    font-size: 2vw;
+}
+.divH4>div>p{
+    font-size: 2vw;
+}
+.cuartoComponente{
+    margin-bottom: 20px;
+}
+footer>div:last-child p:hover{
+    cursor: pointer;
+}
+@keyframes li {
+    from{
+        left: -50px;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+.ulCambioMargin>li:hover{
+    transition: 1s ease;
+    transform:translateY(5px);
+}
+
+.logo:hover{
+    transition: 1s ease;
+    transform: scale(1.1);
+    
+}
+.tamañoIconos{
+    height: 20px;
+    width: 20px;
+}
+.text-primary{
+    text-decoration: none;
+}
+.fs-1{
+    font-size:xxx-large !important;
+}
+.textoInicio{
+    padding: 5%;
+    min-width: 5rem ;
+}
+.container__img>img{
+    width: 100%;
+    height: 100%;
+
+}
+.container__img{
+    width: 15rem;
+    height: 30rem;
+}
+.carousel-inner{
+    border-radius: 20px;
+}
+.size{
+    
+    height: 25rem;
+}
+.imagen{
+    /**/
+    width:  inherit !important;
+    height: inherit !important;
+    object-fit: cover;
+}
+.contendor_imagenMovil{
+    width: 50%;
+    height: 100% ;
+    display: flex;
+}
+.tercerContenedor{
+    padding: 10px;
+}
+.circulo{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.contenedor__nav>a{
+    height: 10%;
+}
+.contenedor__nav>nav{
+    height: 80%;
+}
+.tercerContenedor>div:last-child{
+    padding-top: 7%;
+}
+.contenedorImagenCartas{
+    margin: 20px;
+    width: 5rem;
+    height: 5rem;
+}
+.card-text{
+    text-align: justify;
+    flex-grow: 1;
+}
+footer{
+    padding: 50px;
+    padding-top: 100px;
+    background-color: #f8f9fa;
+}
+@media (max-width:768px){
+    main>div:first-child{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    main>div:first-child>div{
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .tercerContenedor{
+        flex-direction: column-reverse;
+    }
+    .tercerContenedor>div{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+    }
+    .contenedor__nav{
+        display: none !important;
+    }
+    footer{
+        flex-direction: column;
+        
+    }
+    footer>div:first-child{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+}
+@media (max-width:991px){
+    .contendorHaburguesa{
+        flex-direction: column;
+    }
+    .ulCambioMargin>li:hover{
+        transition: 1s ease;
+        transform:translateX(5px);
+    }
+    .dropdown{
+        padding-bottom: 20px;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .formularioStart{
+        flex-direction:column;
+    }
+    .formularioStart>*{
+        width: 100% !important;
+    }
+    .contendorHaburguesa>div{
+        width: 100%;
+        
+    }
+    .contendorHaburguesa>div:first-child{
+        flex-direction: column;
+        
+    }
+    .contendorHaburguesa>div:first-child>ul{
+        gap: 1rem;
+    }
+    .contendorHaburguesa>div:last-child{
+        justify-content: center !important;
+    }
+    
+}
+img{
+    width: 2rem;
+}

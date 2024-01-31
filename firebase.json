@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "coibase",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

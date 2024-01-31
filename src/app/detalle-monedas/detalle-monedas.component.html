@@ -1,0 +1,31 @@
+<p>COMPONENTE DETALLE</p>
+<a href="">Volver Atras</a>
+
+<div class="d-felx flex-column justify-content-center w-100">
+    <p class="w-100 text-center">ID = {{id}}</p>
+    <div class="d-flex gap-5 w-100">
+        <div class="w-25"><img [src]="ajax.detalleApi.image.small"></div>
+        <div class="d-flex align-items-end gap-5 w-75">
+            <div>
+                <p class="d-flex">{{ajax.detalleApi.name}} ({{ajax.detalleApi.symbol}})</p>
+                <p>Precio: {{ajax.detalleApi.market_data.current_price.eur}}€</p>
+                
+                <p><b>Descripción:</b>
+                    <ng-container ngIf="ajax.detalleApi?.description && ajax.detalleApi.description.es">
+                      <p>{{ ajax.detalleApi.description.es.length > 600 ? (ajax.detalleApi.description.es | slice:0:600) + '...' : ajax.detalleApi.description.es }}</p>
+                    </ng-container>
+              
+                    <ng-container ngIf="(!ajax.detalleApi?.description?.es && ajax.detalleApi?.description?.en)">
+                      <p>{{ ajax.detalleApi?.description?.en?.length > 600 ? (ajax.detalleApi?.description?.en | slice:0:600) + '...' : ajax.detalleApi?.description?.en }}</p>
+                    </ng-container>
+              
+                    <ng-container *ngIf="(!ajax.detalleApi?.description?.es && !ajax.detalleApi?.description?.en)">
+                      <p>No hay descripción disponible</p>
+                    </ng-container> 
+                  </p>
+            </div>
+            <button class="h-25" (click)="seguir()">Seguir</button>
+        </div>
+    </div>
+</div>
+
